@@ -33,7 +33,6 @@
             this.txt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbl_bitis = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -79,6 +78,7 @@
             this.sx00 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
+            this.lbl_bitis = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -134,15 +134,6 @@
             this.label2.Size = new System.Drawing.Size(376, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "İterasyon Sırasında Değişkenlerin Durumu";
-            // 
-            // lbl_bitis
-            // 
-            this.lbl_bitis.AutoSize = true;
-            this.lbl_bitis.Location = new System.Drawing.Point(965, 231);
-            this.lbl_bitis.Name = "lbl_bitis";
-            this.lbl_bitis.Size = new System.Drawing.Size(35, 13);
-            this.lbl_bitis.TabIndex = 4;
-            this.lbl_bitis.Text = "label2";
             // 
             // groupBox2
             // 
@@ -422,7 +413,7 @@
             this.groupBox3.Size = new System.Drawing.Size(1084, 144);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Başlangç Değerleri";
+            this.groupBox3.Text = "Son Değerler";
             // 
             // label16
             // 
@@ -607,6 +598,15 @@
             this.lbl.TabIndex = 2;
             this.lbl.Text = "label2";
             // 
+            // lbl_bitis
+            // 
+            this.lbl_bitis.AutoSize = true;
+            this.lbl_bitis.Location = new System.Drawing.Point(965, 231);
+            this.lbl_bitis.Name = "lbl_bitis";
+            this.lbl_bitis.Size = new System.Drawing.Size(35, 13);
+            this.lbl_bitis.TabIndex = 4;
+            this.lbl_bitis.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -639,7 +639,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl_bitis;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
@@ -686,6 +685,7 @@
         private System.Windows.Forms.TextBox sx00;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lbl_bitis;
     }
 }
 
