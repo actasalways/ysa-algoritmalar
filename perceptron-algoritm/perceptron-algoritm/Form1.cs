@@ -43,7 +43,7 @@ namespace perceptron_algoritm
             W[1] = float.Parse(w2.Text);
 
             o = float.Parse(txt_esikDegeri.Text);
-            //i = float.Parse(txt_ogrenmeKatsayisi.Text);
+            i = float.Parse(txt_ogrenmeKatsayisi.Text);
 
         }
 
@@ -60,9 +60,8 @@ namespace perceptron_algoritm
             sw1.Text = W[0].ToString();
             sw2.Text = W[1].ToString();
 
-
             lbl.Text = o.ToString();
-            //lbl_bitis.Text = i.ToString();
+            lbl_bitis.Text = i.ToString();
 
         }
 
