@@ -59,7 +59,7 @@ namespace adaline
                     else
                     {
                         int cikis = -1;
-                        if (cikis != B[j])
+                        if (cikis != B[j])//eşik değeri yeniden hesaplanır 
                         {
                             float e = B[j] - cikis;
                             W[0] = W[0] + a * e * X[j, 0];
@@ -132,7 +132,7 @@ namespace adaline
 
         private void btn_Click(object sender, EventArgs e)
         {
-            //degerleriAl(); -> değerleri float'a çevirmeli - hatalı çalışıyor 
+            //degerleriAl();
             iterasyon();
             degerleriYaz();
         }
