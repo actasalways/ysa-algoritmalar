@@ -43,7 +43,7 @@ namespace perceptron_algoritm
             W[1] = float.Parse(w2.Text);
 
             o = float.Parse(txt_esikDegeri.Text);
-            i = float.Parse(txt_ogrenmeKatsayisi.Text);
+            //i = float.Parse(txt_ogrenmeKatsayisi.Text);
 
         }
 

@@ -217,6 +217,7 @@
             // 
             // txt_ogrenmeKatsayisi
             // 
+            this.txt_ogrenmeKatsayisi.Enabled = false;
             this.txt_ogrenmeKatsayisi.Location = new System.Drawing.Point(944, 84);
             this.txt_ogrenmeKatsayisi.Name = "txt_ogrenmeKatsayisi";
             this.txt_ogrenmeKatsayisi.Size = new System.Drawing.Size(61, 20);
@@ -592,31 +593,31 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(857, 231);
+            this.lbl.Location = new System.Drawing.Point(831, 258);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(35, 13);
-            this.lbl.TabIndex = 2;
-            this.lbl.Text = "label2";
+            this.lbl.Size = new System.Drawing.Size(41, 13);
+            this.lbl.TabIndex = 8;
+            this.lbl.Text = "label20";
             // 
             // lbl_bitis
             // 
             this.lbl_bitis.AutoSize = true;
-            this.lbl_bitis.Location = new System.Drawing.Point(965, 231);
+            this.lbl_bitis.Location = new System.Drawing.Point(956, 258);
             this.lbl_bitis.Name = "lbl_bitis";
-            this.lbl_bitis.Size = new System.Drawing.Size(35, 13);
-            this.lbl_bitis.TabIndex = 4;
-            this.lbl_bitis.Text = "label2";
+            this.lbl_bitis.Size = new System.Drawing.Size(41, 13);
+            this.lbl_bitis.TabIndex = 9;
+            this.lbl_bitis.Text = "label20";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 917);
+            this.Controls.Add(this.lbl_bitis);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lbl_bitis);
-            this.Controls.Add(this.lbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
