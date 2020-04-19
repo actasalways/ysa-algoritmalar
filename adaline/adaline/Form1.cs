@@ -13,7 +13,9 @@ namespace adaline
     public partial class Form1 : Form
     {
          public float[,] X = { { 1, 0 }, { 0, 1 } };
-        public float[] B = { -1f, 1f }, W = { 0,3f, 0,2f };
+
+        public float[] B = { -1f, 1f }, 
+            W = { 0.3f, 0.2f };
         // w-> ağırlıklar,X-> örnek kümeler, B->beklenenler 
 
         public float o = 0.1f; //eşik değeri
@@ -21,70 +23,65 @@ namespace adaline
 
         public bool x1icin = false, x2icin = false;
 
-        void iterasyon()
+
+        void calistir()
         {
+
             txt.Text = "";
-            int iterasyon = 1;
-            bool devam = true;
+            //degerleriAl();
 
-            while (devam)
+            int cikti;
+            float e = 0;
+            bool boz = true,
+                x1t = false,
+                x2t = false;
+            int cik = 0;
+
+            while (boz)
             {
-                for (int j = 0; j < 2; j++)
+                for (int i = 0; i < 2; i++)
                 {
-                    float net = W[0] * X[j, 0] + W[1] * X[j, 1] + o ;
-                    txt.Text += "\r\n ";
-                    txt.Text += iterasyon + ". iterasyon";
-                    iterasyon++;
+                    txt.Text += "\r\n";
 
-                    if (net >= 0)// çıkış 1dir
-                    {
-                        int cikis = 1;
-                        if (cikis != B[j])//ağırlık-eşik değeri yeniden hesaplanır 
-                        {
-                            float e = B[j] - cikis;
-                            W[0] = W[0] + (a * e * X[j, 0]) ;
-                            W[1] = W[1] + (a * e * X[j, 1]) ;
-                            o = o + a * e;
-                            txt.Text += "\r\n Net Değeri = " + net.ToString();
-                            txt.Text += "\r\n Yeni Ağırlıklar = " + W[0].ToString() + "," + W[1].ToString();
-                            txt.Text += "\r\n Yeni Eşik Değeri = " + o.ToString(); ;
-                            //txt.Text += "\r\n Fark  = " + e.ToString(); ;
-                        }
-                        else // çıkış değeri beklenene eşittir -> çık
-                        {
-                            txt.Text += "\r\n ağırlıklar değişmedi. ";
-                            x1icin = true;
-                        }
-                    }
-                    else
-                    {
-                        int cikis = -1;
-                        if (cikis != B[j])//eşik değeri yeniden hesaplanır 
-                        {
-                            float e = B[j] - cikis;
-                            W[0] = W[0] + a * e * X[j, 0];
-                            W[1] = W[1] + a * e * X[j, 1];
-                            o = o + a * e;
-                            txt.Text += "\r\n Net Değeri = " + net.ToString();
-                            txt.Text += "\r\n Yeni Ağırlıklar = " + W[0].ToString() + "," + W[1].ToString();
-                            txt.Text += "\r\n Yeni Eşik Değeri = " + o.ToString(); ;
+                    txt.Text += "alınan değerler= W[0]=" + W[0] + "   X[j, 0]=" + X[i, 0] + "  W[1]=" + W[1] + "  X[j, 1]=" + X[i, 1] + "  o=" + o;
+                    float net = (W[0] * X[i, 0] + W[1] * X[i, 1]) + o;
+                    txt.Text += "  net değer= " + net.ToString();
 
-                        }
-                        else // çıkış değeri beklenene eşittir -> çık
-                        {
-                            txt.Text += "\r\n ağırlıklar değişmedi. ";
-                            x2icin = true;
-                        }
+                    if (net >= 0) { cikti = 1; }
+                    else { cikti = -1; }
+
+                    if (cikti != B[i]) // ağırlıklar yeniden hesaplanmalıdır
+                    {
+                        e = B[i] - cikti;
+                        txt.Text += "\r\n e değeri= " + e;
+                        txt.Text += "\r\n";
+
+                        W[0] = W[0] + a * e * X[i, 0];
+                        W[1] = W[1] + a * e * X[i, 1];
+                        txt.Text += " W[0]=" + W[0] + "  W[1]=" + W[1];
+                        txt.Text += "\r\n";
+
+                        o = o + a * e;
+                        txt.Text += " o= " + o;
+                        txt.Text += "\r\n";
 
                     }
 
+                    if(cikti==B[i])
+                    {
+                        txt.Text += "\r\n";
+                        txt.Text += "Ağırlıklarda bir değişiklik yapılmadı.";
+                        txt.Text += "\r\n";
+                        if (i == 0) { x1t = true; }
+                        if (i == 1) { x2t = true; }
+                    }
+                    if(x1t && x2t) { boz = false; }
                 }
-                if (x1icin && x2icin)
-                    devam = false;
+
+
             }
 
         }
-
 
         void degerleriAl()
         {
@@ -127,14 +124,15 @@ namespace adaline
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            calistir();
 
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
-            //degerleriAl();
-            iterasyon();
+            calistir();
             degerleriYaz();
+
         }
     }
 }

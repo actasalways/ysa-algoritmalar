@@ -61,6 +61,8 @@
             this.lbl = new System.Windows.Forms.Label();
             this.btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.so1 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.sw2 = new System.Windows.Forms.TextBox();
@@ -80,8 +82,6 @@
             this.sx01 = new System.Windows.Forms.TextBox();
             this.sx00 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.so1 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -113,7 +113,7 @@
             this.groupBox2.Controls.Add(this.x01);
             this.groupBox2.Controls.Add(this.x00);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(8, 19);
+            this.groupBox2.Location = new System.Drawing.Point(16, 19);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1084, 144);
             this.groupBox2.TabIndex = 7;
@@ -220,9 +220,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.Location = new System.Drawing.Point(784, 84);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 20);
+            this.label12.Size = new System.Drawing.Size(59, 20);
             this.label12.TabIndex = 18;
-            this.label12.Text = "Alpha";
+            this.label12.Text = "Alpha=";
             // 
             // label9
             // 
@@ -374,11 +374,11 @@
             // txt
             // 
             this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt.Location = new System.Drawing.Point(99, 102);
+            this.txt.Location = new System.Drawing.Point(8, 100);
             this.txt.Multiline = true;
             this.txt.Name = "txt";
             this.txt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt.Size = new System.Drawing.Size(483, 356);
+            this.txt.Size = new System.Drawing.Size(681, 356);
             this.txt.TabIndex = 3;
             // 
             // groupBox3
@@ -420,7 +420,7 @@
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(279, 125);
             this.btn.TabIndex = 28;
-            this.btn.Text = "button1";
+            this.btn.Text = "Hesapla";
             this.btn.UseVisualStyleBackColor = true;
             this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -453,6 +453,25 @@
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Son Değerler";
+            // 
+            // so1
+            // 
+            this.so1.Location = new System.Drawing.Point(731, 92);
+            this.so1.Name = "so1";
+            this.so1.Size = new System.Drawing.Size(61, 20);
+            this.so1.TabIndex = 27;
+            this.so1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label29.Location = new System.Drawing.Point(664, 88);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(46, 24);
+            this.label29.TabIndex = 26;
+            this.label29.Text = "O = ";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label16
             // 
@@ -628,30 +647,11 @@
             this.label28.TabIndex = 0;
             this.label28.Text = "X1 = (";
             // 
-            // so1
-            // 
-            this.so1.Location = new System.Drawing.Point(731, 92);
-            this.so1.Name = "so1";
-            this.so1.Size = new System.Drawing.Size(61, 20);
-            this.so1.TabIndex = 27;
-            this.so1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label29.Location = new System.Drawing.Point(664, 88);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(46, 24);
-            this.label29.TabIndex = 26;
-            this.label29.Text = "O = ";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 958);
+            this.ClientSize = new System.Drawing.Size(1136, 869);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label1);
